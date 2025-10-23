@@ -27,8 +27,11 @@ body{
     padding:10px;
 }
 
-.nav{
-    width:100%;
+nav{
+    width:90%;
+    border: 1px solid white;
+    padding: 5px;
+    margin: 5px;
 }
 
 .letter{
@@ -43,6 +46,29 @@ body{
     background-color: rgba(26,104,104,1.0);
 }
 
-.cocktail-ct{
+.cocktails-ct{
     border: 1px solid white;
+    width:90%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cocktail-scrollbox{
+    border: 5px solid black;
+    width:85%;
+    height:90vh;
+    overflow-y: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.cocktailBox{
+    width:90%;
+    border:1px solid white;
+    height:500px;
+
 }
