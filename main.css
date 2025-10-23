@@ -42,3 +42,7 @@ body{
 .letter:hover{
     background-color: rgba(26,104,104,1.0);
 }
+
+.cocktail-ct{
+    border: 1px solid white;
+}
