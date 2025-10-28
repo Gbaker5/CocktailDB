@@ -12,11 +12,12 @@
     <div class="header">
         <h1>Cocktail Finder</h1>
         <span>Looking for A Cocktail?</span>
-        <span>Ive got you covered.</span>
+        <span>Choose The First Letter of the Drink Name:</span>
     </div>
     
 
     <nav>
+        
         <ul>
             
             <button class="letter" value="a">A</button>
@@ -50,6 +51,19 @@
         
     </nav>
 
+    <div class="ingredient-ct">
+        <ul class="ingspans">
+            <li><span>Or Enter an Ingredient:</span></li>
+            <li><span>If we have it, we'll serve it!</span></li>
+        </ul>
+        
+        <ul class="inginputs">
+            <li><input type="text" id="ingValue"></li>
+            <li><button id="ingredient">By Ingredient</button></li>
+        </ul>
+        
+    </div>
+
 
     <div class="cocktails-ct">
         <div id="cocktail-scrollbox">
@@ -60,6 +74,7 @@
     </div>
 
     <script src="main.js"></script>
+      <script src="ingredient.js"></script>
 </body>
 </html>
 

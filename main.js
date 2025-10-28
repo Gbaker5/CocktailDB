@@ -90,7 +90,7 @@ function cocktailList(letter){
                 }
             });
 
-            console.log(ingredientList)
+            //console.log(ingredientList)
 
             
             //Measurements
@@ -108,7 +108,7 @@ function cocktailList(letter){
                 }
             });
 
-            console.log(measurementList)
+            //console.log(measurementList)
 
         
             // Ingredient-Measurement Strings
