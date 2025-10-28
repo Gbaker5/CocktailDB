@@ -69,6 +69,35 @@ nav{
 .cocktailBox{
     width:90%;
     border:1px solid white;
+    border-radius: 10px;
     height:500px;
+    margin-bottom: 25px;
+    display:flex;
+    flex-direction: row;
+    
+    align-items: center;
+}
 
+.inDivLeft{
+   width:50%; 
+   border:1px solid white;
+   height:100%;
+}
+
+.inDivRight{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    border:1px solid white;
+}
+
+.cocktailImg{
+    width:100%;
+    height:100%;
+    border-radius: 15px;
+}
+
+.ingredient-list{
+    list-style-type: none;
 }
