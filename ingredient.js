@@ -9,6 +9,11 @@ button2.addEventListener('click', () => {
 /////////Initial Fetch for Ingredient
 function drinkByIngredient (inputValue){
 
+    const existingdrinks = document.querySelectorAll('.cocktailBox')
+    Array.from(existingdrinks).forEach(div => {
+        div.remove()
+    });
+
     /////Format Input
     //console.log(inputValue)
     const formatStr = inputValue
@@ -31,29 +36,55 @@ function drinkByIngredient (inputValue){
             //console.log(drinkNameArr)
         }
 
-        ////////Second Fetches uses those names to retreive full drinks and details
+       
+        function showLoader() {
+            document.getElementById('loader').style.display = 'block';
+        }
+
+        function hideLoader() {
+            document.getElementById('loader').style.display = 'none';
+        }
+
+        function disableLetterButtons() {
+            const buttons = document.querySelectorAll('.letter');
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = 0.4;
+                btn.style.pointerEvents = 'none';
+            });
+        }
+
+        function enableLetterButtons() {
+            const buttons = document.querySelectorAll('.letter');
+            buttons.forEach(btn => {
+                btn.disabled = false;
+                btn.style.opacity = 1;
+                btn.style.pointerEvents = 'auto';
+            });
+        }
+
+        function disableSearchBtn(){
+            button2.disabled = true;
+            button2.style.opacity = 0.4;
+            button2.style.pointerEvents = 'none';
+        }
+
+        function enableSearchBtn(){
+            button2.disabled = false;
+            button2.style.opacity = 1;
+            button2.style.pointerEvents = 'auto'; 
+        }
 
 
-        //const drinkObjArr = [];
-//
-        //drinkNameArr.forEach(drink => {
-        //        
-        //        fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
-        //        .then(res => res.json()) // parse response as JSON
-        //        .then(data => {
-        //            console.log(data.drinks)
-        //            drinkObjArr.push(data.drinks)
-//
-//
-        //         })
-        //        .catch(err => {
-        //            console.log(`error ${err}`)
-        //         });
-        //    });
-        //
-        //console.log(drinkObjArr)
+
 
         async function getAllDrinks(drinkNameArr) {
+
+        ////
+        disableLetterButtons()
+        disableSearchBtn()
+        showLoader()
+
           const drinkObjArr = [];
         
           for (const drink of drinkNameArr) {
@@ -67,11 +98,15 @@ function drinkByIngredient (inputValue){
               console.error(`Error fetching ${drink}:`, err);
             }
           }
-      
-          // Flatten the array of arrays
-          const allDrinks = drinkObjArr.flat();
-          //console.log(allDrinks); 
-          return allDrinks;
+
+        ////
+        hideLoader()
+        enableLetterButtons()
+        enableSearchBtn()
+            // Flatten the array of arrays
+            const allDrinks = drinkObjArr.flat().filter(d => d !== null);
+            return allDrinks;
+
         }
 
         //////async function that awaits result of second fetch then displays cocktails
