@@ -353,3 +353,79 @@ ul{
 
 
 /**/
+/* ============================= */
+/* 📱 MOBILE FIXES ONLY */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  /* Make cards full width and stacked */
+  .cocktailBox {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem;
+    width: 100%;
+  }
+
+  /* Image section */
+  .inDivLeft {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  .inDivLeft img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Text section */
+  .inDivRight {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .inDivRight h2 {
+    font-size: 1.25rem;
+  }
+
+  .inDivRight p {
+    font-size: 0.95rem;
+  }
+
+  /* Ingredient list spacing */
+  .ingredient-list {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  /* Input area wraps nicely */
+  .inginputs {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .inginputs input {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .inginputs button {
+    margin-left: 0;
+    width: 100%;
+    max-width: 200px;
+  }
+
+}
