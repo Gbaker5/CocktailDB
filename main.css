@@ -351,6 +351,23 @@ ul{
   color: #D14A4A;
 }
 
+.footer{
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: #D14A4A;
+}
+
+.footer > p a{
+  color: #4AD1D1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 
 /**/
 /* ============================= */
